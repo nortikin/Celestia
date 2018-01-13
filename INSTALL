@@ -77,6 +77,18 @@ instance you have Mesa installed, you will also have to install the
 mesa-devel package (or something named similarly).  Missing glu.h or glut.h
 means that you don't have GLU, GLUT, or their devel pacakges installed.
 
+Example for Debian
+~~~~~~~~~~~~~~~~~~
+
+sudo apt install libgtk2.0-dev libgtkglext1-dev liblua5.1-0-dev freeglut3-dev
+git clone https://github.com/CelestiaProject/Celestia
+cd Celestia
+git checkout 4e947ef387b554c68fc32da95a2a2bcdee3e1f78
+autoreconf -iv
+./configure --with-glut --with-lua
+make -j5
+sudo make install
+
 
 Chris Laurel                &      Deon Ramsey
 claurel@.shatters.net              dramsey@users.sourceforge.net
@@ -86,3 +98,5 @@ Christophe Teyssier
 chris@teyssier.org
 
 Updated 2004-04-28 by pat@suwalski.net
+
+Updated 2018-01-14 by nikitronn@yandex.ru
